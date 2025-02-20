@@ -4,9 +4,11 @@ import './index.css'
 import App from './App.tsx'
 import { searchCompanies } from './api';
 
-searchCompanies("tsla")
-  .then(response => console.log(response))
-  .catch(error => console.error(error));
+
+//test
+// searchCompanies("tsla")
+//   .then(response => console.log(response))
+//   .catch(error => console.error(error));
 
 
 
