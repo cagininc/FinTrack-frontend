@@ -1,0 +1,43 @@
+<svg version="1.1" id="fintrackLogo"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     width="300" height="80" viewBox="0 0 300 80">
+
+  <style>
+    /* Kalkanın ana rengi (lacivert) */
+    .shield {
+      fill: #14213D; 
+    }
+    /* "F" harfi ve "fintrack" metninin rengi (turuncu) */
+    .accent {
+      fill: #FCA311; 
+    }
+    /* Logo yazı tipi ayarları */
+    .logo-text {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      font-size: 24px;
+    }
+    .f-char {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      font-size: 18px;
+    }
+  </style>
+
+  <!-- Kalkan Şekli -->
+  <path class="shield" d="
+    M 30,10 
+    L 50,10 
+    C 70,25 70,45 50,60 
+    C 30,45 30,25 50,10 
+    Z
+  " />
+
+  <!-- Kalkanın ortasına 'F' harfi -->
+  <text class="accent f-char" x="38" y="35">F</text>
+
+  <!-- 'fintrack' metni -->
+  <text class="accent logo-text" x="70" y="40">fintrack</text>
+
+</svg>
