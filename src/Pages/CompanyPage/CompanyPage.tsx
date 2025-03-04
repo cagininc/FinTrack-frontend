@@ -6,6 +6,7 @@ import SideBar from '../../Components/SideBar/SideBar';
 import CompanyDashboard from '../../Components/CompanyDashboard/CompanyDashboard';
 import Tile from '../../Components/Tile/Tile';
 import Spinner from '../../Components/Spinner/Spinner';
+import TenKFinder from '../../Components/TenKFinder/TenKFinder';
 
 interface Props  {
 
@@ -47,7 +48,7 @@ getProfileInit();
 <Tile title="Price" subtitle={company.price.toString()}/> 
 <Tile title="Sector" subtitle={company.sector}/> 
 <Tile title="Dcf" subtitle={company.dcf.toString()}/> 
-
+<TenKFinder ticker={company.symbol}/>
 <p className='bg-white shadow rounded text-medium text-gray-900 p-3 mt-1 m-4'>
 
 {company.description}
