@@ -11,28 +11,36 @@ interface Props  {
 
 
 const RatioList = ({config,data}: Props) => {
+console.log("Ratio list congig:",config);
+console.log("Ratio list data:",data);
+console.log("ratio list data type:", typeof data, JSON.stringify(data, null, 2));
 
     const renderedRows=config.map((row:any ,index:number)=>{
+        const renderedValue=row.render(data);
+        console.log(`Row ${index} rendered value:`, renderedValue);
 
         return( 
-            <li  key={index} className='py-3 sm:py-4'>
-                <div className='flex items-center space x-4'></div>
-               <div className='flex-1 min-w-0'>
-                <p className='text-sm font-medium text-gray-900 truncate'  >
-                {row.label}
-                </p>
-                <p className='text-sm text-gray-500 truncate'>
-                {row.subtitle && row.subtitle}
-
-                </p>
-                </div> 
-                    <div className="inline-flex items-center-text-base font-semibold text-gray-900">
-
-                        {row.render(data)}
-                    </div>
-
-
-            </li>
+            <li className="py-6 sm:py-6">
+        <div className="flex items-center space-x-4">
+          <div className="flex-1 min-w-0">
+            <p className="text-sm font-medium text-gray-900 truncate">
+              {row.label}
+            </p>
+            <p className="text-sm text-gray-500 truncate">
+              <a
+                href="/cdn-cgi/l/email-protection"
+                className="__cf_email__"
+                data-cfemail="17727a767e7b57607e7973646372653974787a"
+              >
+                {row.subTitle && row.subTitle}
+              </a>
+            </p>
+          </div>
+          <div className="inline-flex items-center text-base font-semibold text-gray-900">
+            {row.render(data)}
+          </div>
+        </div>
+      </li>
         )
 
 

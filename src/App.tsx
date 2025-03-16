@@ -1,7 +1,10 @@
 
 import { Outlet } from 'react-router-dom'
 import './App.css'
+import "react-toastify/dist/ReactToastify.css"
 import NavBar from './Components/NavBar/NavBar'
+import { ToastContainer } from 'react-toastify'
+import { UserProvider } from './Context/useAuth'
 
 function App() {
 
@@ -12,10 +15,11 @@ function App() {
 
    
     <>
-   
+   <UserProvider>
     <NavBar/>
 <Outlet/>
-    
+<ToastContainer/>
+</UserProvider>
     
      </>
 

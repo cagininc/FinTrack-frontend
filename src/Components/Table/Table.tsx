@@ -9,9 +9,9 @@ data:any;
 
 
 const Table = ({config,data}: Props) => {
-    const renderedRows = data.map((company:any) => {
+    const renderedRows = data.map((company:any,index:any) => {
       return (
-        <tr key={company.cik}>
+        <tr key={`${company.cik}-${index}`}>
           {config.map((val:any)=>{
 
             return(
@@ -21,11 +21,11 @@ const Table = ({config,data}: Props) => {
         </tr>
       );
     });
-    const renderedHeaders=config.map((config:any)=>{
+    const renderedHeaders=config.map((config:any,index:any)=>{
 
 return(
 <th className='p-4 text-left text-xs font-medium text-fray-500 uppercase tracking-wider'
-    key={config.label}
+    key={`${config.label}-${index}`}
 >{config.label}
 
 </th>

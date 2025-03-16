@@ -39,9 +39,10 @@ getTenKData();
     <div className='inline-flex rounded-md shadow-sm m-4'>
     
     { companyData? (
-        companyData?.slice(0,5).map((tenK)=> 
+        companyData?.slice(0,5).map((tenK,index)=> 
             {
-                return <TenKFinderItem key={tenK.symbol} tenK={tenK} />
+                return   <TenKFinderItem key={`${tenK.symbol}-${index}`} tenK={tenK} />
+
             }
        
     )
